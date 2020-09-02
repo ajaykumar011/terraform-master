@@ -7,7 +7,7 @@ output "instance_public_dns" {
 }
 
 output "instance_key" {
-    valule = aws_instance.ebs_instance_example.key_name
+    value = aws_instance.ebs_instance_example.key
 }
 
 output "tags" {

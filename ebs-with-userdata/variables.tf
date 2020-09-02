@@ -26,7 +26,7 @@ variable "ebs_size" {
 }
 
 variable "key_name" {   # this key should be exist on the AWS. We are simply using the key not creating it.
-  type    = "string"
+  type    = string
   default = "ec2-demo"
 }
 
