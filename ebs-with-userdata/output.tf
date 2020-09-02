@@ -7,7 +7,7 @@ output "instance_public_dns" {
 }
 
 output "instance_key" {
-    value = aws_instance.ebs_instance_example.key
+    value = aws_instance.ebs_instance_example.key_name
 }
 
 output "tags" {
@@ -16,12 +16,12 @@ output "tags" {
                aws_instance.ebs_instance_example.*.tags.Name]
 }
 
-output "ebs_volid" {
-    value = aws_ebs_volume.ebs_volume.volume_id
+output "ebs_voltype" {
+    value = aws_ebs_volume.ebs_volume.type
 }
 
 output "ebs_volsize" {
-    value = aws_ebs_volume.ebs_volume.volume_size
+    value = aws_ebs_volume.ebs_volume.size
 }
 
 output "vpc_id" {
