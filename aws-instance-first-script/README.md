@@ -44,15 +44,9 @@ terraform apply tfplan
 OUTPUT:
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
-The state of your infrastructure has been saved to the path
-below. This state is required to modify and destroy your
-infrastructure, so keep it safe. To inspect the complete state
+The state of your infrastructure has been saved to the path below. This state is required to modify and destroy your infrastructure, so keep it safe. To inspect the complete state
 use the `terraform show` command.
 
 State path: terraform.tfstate
-
-
-If you find any warning of Interpolation you can use like below: 
-Warning: Interpolation-only expressions are deprecated
 
 

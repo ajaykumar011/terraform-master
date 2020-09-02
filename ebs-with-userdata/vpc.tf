@@ -1,3 +1,4 @@
+#aws_vpc resources
 resource "aws_vpc" "vpc_demo" {
   cidr_block           = var.cidr
   instance_tenancy     = var.instance_tenancy
@@ -10,6 +11,7 @@ resource "aws_vpc" "vpc_demo" {
   }
 }
 
+#GW for later created public subnet
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.vpc_demo.id
 
@@ -18,6 +20,7 @@ resource "aws_internet_gateway" "gw" {
   }
 }
 
+#only one public subnet public_1
 resource "aws_subnet" "public_1" {
   availability_zone       = "us-east-1a"
   vpc_id                  = aws_vpc.vpc_demo.id
@@ -29,6 +32,7 @@ resource "aws_subnet" "public_1" {
   }
 }
 
+#RT for public subnet
 resource "aws_route_table" "route-public" {
   vpc_id = aws_vpc.vpc_demo.id
 
@@ -42,7 +46,8 @@ resource "aws_route_table" "route-public" {
   }
 }
 
+#Associatoin of public subnet to RT
 resource "aws_route_table_association" "public_1" {
-  subnet_id      = aws_subnet.public_1.id
-  route_table_id = aws_route_table.route-public.id
+  subnet_id      = aws_subnet.public_1.id                   # Id value of public_1 
+  route_table_id = aws_route_table.route-public.id          # Id value of RT to be connected 
 }

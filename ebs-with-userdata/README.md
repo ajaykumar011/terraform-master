@@ -23,3 +23,6 @@ module "ec2_instance" {
 | key-name | ec2 access key name | string | ec2-demo | yes |
 | instance_type | ec2 instance_type | string | t2.micro | yes |
 | ebs_size | EBS volume size | string | 20 | yes |
+
+
+
