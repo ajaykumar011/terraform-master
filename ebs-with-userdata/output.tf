@@ -7,11 +7,7 @@ output "instance_public_dns" {
 }
 
 output "instance_key" {
-<<<<<<< HEAD
     value = aws_instance.ebs_instance_example.key
-=======
-    value = aws_instance.ebs_instance_example.key_name
->>>>>>> 9b66ce283004942b68634a079ea45e3b1955f0f5
 }
 
 output "tags" {
