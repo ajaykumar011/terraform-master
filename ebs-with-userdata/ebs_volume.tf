@@ -14,6 +14,7 @@ resource "aws_volume_attachment" "ebc_volume_attachment" {
   device_name = var.device_name                                         # value /dev/xvdh from variables.tf
   volume_id   = aws_ebs_volume.ebs_volume.id                            # this id is generated from above EBS resource
   instance_id = aws_instance.ebs_instance_example.id                    # Instance Id to link. Id id generated from instance.tf 
+  force_detach = true
 }
 
 data "template_file" "init" {  #This template named 'init' is to be used with instance user-data

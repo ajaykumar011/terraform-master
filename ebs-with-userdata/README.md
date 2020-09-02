@@ -37,4 +37,5 @@ root@digi2:~/terraform-master/ebs-with-userdata# terraform show | grep  'key'
     key_name                     = "ec2-demo"
 root@digi2:~/terraform-master/ebs-with-userdata# ssh -i ec2-demo ec2-user@54.221.99.252
 
-
+# Destroy process
+Deatach the EBS  (on console) before you destory the terraform else it will stuck in remove igw.
