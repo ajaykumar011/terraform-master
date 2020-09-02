@@ -16,10 +16,10 @@ resource "aws_volume_attachment" "ebc_volume_attachment" {
   instance_id = aws_instance.ebs_instance_example.id                    # Instance Id to link. Id id generated from instance.tf 
 }
 
-data "template_file" "init" {
+data "template_file" "init" {  #This template named 'init' is to be used with instance user-data
   template = file("volume.sh")
 
   vars = {
-    device_name = var.device_name
+    device_name = var.device_name   # variable form variables.tf - /dev/xvdh
   }
 }

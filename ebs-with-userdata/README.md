@@ -26,3 +26,15 @@ module "ec2_instance" {
 
 
 
+# Process
+
+root@digi2:~/terraform-master/ebs-with-userdata# terraform show | grep  'public_dns\|public_ip'
+    associate_public_ip_address  = true
+    public_dns                   = "ec2-54-221-99-252.compute-1.amazonaws.com"
+    public_ip                    = "54.221.99.252"
+
+root@digi2:~/terraform-master/ebs-with-userdata# terraform show | grep  'key'
+    key_name                     = "ec2-demo"
+root@digi2:~/terraform-master/ebs-with-userdata# ssh -i ec2-demo ec2-user@54.221.99.252
+
+
