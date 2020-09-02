@@ -24,7 +24,7 @@ module "ec2_instance" {
 
 # On CLI (without Jenkins)           
 
-# Git the repository and enter the directory and run the below commands. you don't need to specify AWS credentials if the AWS configure is already done. or you can simply export the Access key and Secret key to environment variable using export command in linux.
+### Git the repository and enter the directory and run the below commands. you don't need to specify AWS credentials if the AWS configure is already done. or you can simply export the Access key and Secret key to environment variable using export command in linux.
 
 # Commands are below
 
