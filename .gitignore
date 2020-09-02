@@ -16,3 +16,12 @@ terraform.tfvars
 
 **/.build-harness
 **/build-harness
+*/tfplan
+*/tfplan.txt
+
+# .tfvars files
+*.tfvars
+
+
+#Two consecutive asterisks ("**") in patterns matched against full pathname may have special meaning:
+# A leading "**" followed by a slash means match in all directories.
