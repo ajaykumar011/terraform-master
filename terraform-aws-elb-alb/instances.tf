@@ -11,7 +11,7 @@ resource "aws_instance" "elb_instance_example1" {
 
   user_data = <<EOF
 		#! /bin/bash
-                sudo yum update -y
+    sudo yum update -y
 		sudo yum install -y httpd.x86_64
 		sudo service httpd start
 		sudo service httpd enable
@@ -36,7 +36,7 @@ resource "aws_instance" "elb_instance_example2" {
 
   user_data = <<EOF
 		#! /bin/bash
-                sudo yum update -y
+    sudo yum update -y
 		sudo yum install -y httpd.x86_64
 		sudo service httpd start
 		sudo service httpd enable

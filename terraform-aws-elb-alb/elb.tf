@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.region
-}
-
 resource "aws_lb" "elb_example" {
   name               = "elb"
   internal           = false
@@ -9,7 +5,7 @@ resource "aws_lb" "elb_example" {
   security_groups    = [aws_security_group.elb_sg.id]
   subnets            = [aws_subnet.public_1.id,aws_subnet.public_2.id]
 
-  enable_deletion_protection = true
+  enable_deletion_protection = false
     tags = {
     Environment = "elb-example"
   }
@@ -44,10 +40,4 @@ resource "aws_lb_target_group_attachment" "test1" {
   target_group_arn = aws_lb_target_group.test.arn
   target_id        = aws_instance.elb_instance_example2.id
   port             = 80
-}
-
-
-output "elb_example" {
-  description = "The DNS name of the ELB"
-  value       = aws_lb.elb_example.dns_name
 }

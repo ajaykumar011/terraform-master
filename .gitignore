@@ -22,6 +22,7 @@ terraform.tfvars
 # .tfvars files
 *.tfvars
 *.pem
+**/*.pem
 
 #Two consecutive asterisks ("**") in patterns matched against full pathname may have special meaning:
 # A leading "**" followed by a slash means match in all directories.

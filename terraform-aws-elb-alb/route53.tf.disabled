@@ -1,0 +1,20 @@
+resource "aws_route53_zone" "cloudzone_aws" {
+  name = "cloudzone.today"
+
+  tags = {
+    Environment = "dev"
+  }
+}
+
+resource "aws_route53_record" "www" {
+  zone_id = aws_route53_zone.easy_aws.zone_id
+  name    = "www.cloudzone.today"
+  type    = "A"
+
+  alias {
+     name                   = aws_lb.elb_example.dns_name
+     zone_id                = aws_lb.elb_example.zone_id
+     evaluate_target_health = true
+   }
+
+}
