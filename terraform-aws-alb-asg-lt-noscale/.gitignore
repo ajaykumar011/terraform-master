@@ -1,0 +1,27 @@
+#env file
+.env
+
+#vscode
+.vscode/
+
+#template
+template
+
+*/terraform.tfvars
+*/terraform.tfstate
+*/terraform.tfstate.backup
+*/.terraform
+*/out.terraform
+*/mykey
+terraform.tfvars
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+**/.idea
+**/*.iml
+
+**/.build-harness
+**/build-harness
